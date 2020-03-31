@@ -2,8 +2,8 @@ const express = require('express');
 
 const routes = express.Router();
 
-routes.get('/teste', (req, res) => {
-  return res.send('Hello SkynetBox');
-})
+const BoxController = require('./controllers/BoxController');
+
+routes.post('/boxes', BoxController.store);
 
 module.exports = routes;
