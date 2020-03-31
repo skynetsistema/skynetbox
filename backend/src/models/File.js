@@ -1,13 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const File = new mongoose.Schema({
 title: {
   type: String,
-  require: true,
+  required: true
 },
 path: {
    type: String,
-   require: true,
+   required: true
 },
 
 }, 
@@ -16,4 +16,4 @@ path: {
 }
 );
 
-module.exports = mongoose.model('File', File);
+module.exports = mongoose.model("File", File);
